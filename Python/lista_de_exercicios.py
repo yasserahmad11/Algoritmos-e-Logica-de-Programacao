@@ -103,3 +103,37 @@ elif num3 > num1 and num3 > num2:
   print(f"O terceiro número ({num3}) é o maior dos três!\n")
 else:
   print(f"Os três números são iguais!\n")
+
+print("Quem pode votar?")
+idade = int(input("Digite sua idade: "))
+
+if idade >= 16:
+  print("Você pode votar!\n")
+else:
+  print("Você não pode votar!\n")
+
+print("Quem pode dirigir?")
+idade = int(input("Digite sua idade: "))
+
+if idade >= 18:
+  print("Você pode dirigir!\n")
+else:
+  print("Você não pode dirigir!\n")
+
+print("Desconto de 10% na compra à vista")
+preco = float(input("Digite o valor do produto: "))
+
+desconto = preco * 0.1
+preco = preco - desconto
+print("Você recebe 10% de desconto caso pague a vista!")
+print(f"O valor à vista da compra com 10% de desconto fica: R${preco}\n")
+
+print("Aumento de 15% no salário até 2000 reais")
+salario = float(input("Digite o valor do seu salário: "))
+
+if salario <= 2000:
+  aumento = salario * 0.15
+  salario = salario + aumento
+  print(f"O seu salário com aumento de 15% é: R${salario}\n")
+else:
+  print("O seu salário não se aplica ao aumento!\n")

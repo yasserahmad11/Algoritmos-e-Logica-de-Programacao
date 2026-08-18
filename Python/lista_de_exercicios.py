@@ -12,50 +12,94 @@ print("Soma/Adição")
 a = float(input("Digite um número: "))
 b = float(input("Digite um número: "))
 soma = a + b
-print("Soma = ", soma)
+print(f"Soma = {soma}\n")
 
 print("Subtração")
 
 a = float(input("Digite um número: "))
 b = float(input("Digite um número: "))
 subtracao = a - b
-print("Subtração = ", subtracao)
+print(f"Subtração = {subtracao}\n")
 
 print("Multiplicação")
 
 a = float(input("Digite um número: "))
 b = float(input("Digite um número: "))
 multiplicacao = a * b
-print("Multiplicação = ", multiplicacao)
+print(f"Multiplicação = {multiplicacao}\n")
 
 print("Divisão")
 
 a = float(input("Digite um número: "))
 b = float(input("Digite um número: "))
 divisao = a / b
-print("Divisão = ", divisao)
+print(f"Divisão = {divisao}\n")
 
 print("Antecessor/Sucessor")
 num = int(input("Digite um número: "))
 antecessor = num - 1
 sucessor = num + 1
 print(f"O antecessor de {num} é: {antecessor}")
-print(f"O sucessor de {num} é {sucessor}")
+print(f"O sucessor de {num} é {sucessor}\n")
 
 print("Dobro/Triplo")
 num = float(input("Digite um número: "))
 dobro = num * 2
 triplo = num * 3
 print(f"O dobro de {num} é: {dobro}")
-print(f"O triplo de {num} é: {triplo}")
+print(f"O triplo de {num} é: {triplo}\n")
 
+print("Perímetro do Retângulo")
 lado1 = float(input("Digite o valor de um dos lados de um retângulo: "))
 lado2 = float(input("Digite o valor do outro lado desse retângulo: "))
 perimetro = (lado1 * 2) + (lado2 * 2)
-print(f"O perímetro desse retângulo de lados {lado1} e {lado2} é: {perimetro}")
+print(f"O perímetro desse retângulo de lados {lado1} e {lado2} é: {perimetro}\n")
 
+print("Área do Triângulo")
 base = float(input("Digite o valor da base de um triângulo: "))
 altura = float(input("Digite o valor da altura da base desse triângulo: "))
 area = (base * altura) / 2
-print(f"A área desse triângulo de base {base} e altura {altura} é: {area}")
+print(f"A área desse triângulo de base {base} e altura {altura} é: {area}\n")
 
+print("Número: Positivo, Negativo ou Zero")
+numero = int(input("Digite um número: "))
+
+if numero > 0:
+  print("Esse número é POSITIVO!\n")
+elif numero < 0:
+  print("Esse número é NEGATIVO!\n")
+else:
+  print("Esse número é ZERO!\n")
+
+print("Número: Par ou Ímpar")
+numero = int(input("Digite um número: "))
+
+if numero % 2 == 0:
+  print("Esse número é PAR!\n")
+else:
+  print("Esse número é ÍMPAR!\n")
+
+print("Identificação do maior entre dois números")
+num1 = int(input("Digite o primeiro número: "))
+num2 = int(input("Digite o segundo número: "))
+
+if num1 > num2:
+  print(f"O primeiro número ({num1}) é maior que o segundo número ({num2})\n")
+elif num1 < num2:
+  print(f"O segundo número ({num2}) é maior que o primeiro número ({num1})\n")
+else:
+  print(f"Os dois números são iguais ({num1})\n")
+
+print("Identificação do maior entre três números")
+num1 = int(input("Digite o primeiro número: "))
+num2 = int(input("Digite o segundo número: "))
+num3 = int(input("Digite o terceiro número: "))
+
+if num1 > num2 and num1 > num3:
+  print(f"O primeiro número ({num1}) é o maior dos três!\n")
+elif num2 > num1 and num2 > num3:
+  print(f"O segundo número ({num2}) é o maior dos três!\n")
+elif num3 > num1 and num3 > num2:
+  print(f"O terceiro número ({num3}) é o maior dos três!\n")
+else:
+  print(f"Os três números são iguais!\n")

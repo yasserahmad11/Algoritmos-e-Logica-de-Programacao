@@ -106,27 +106,45 @@ else:
 
 print("Quem pode votar?")
 idade = int(input("Digite sua idade: "))
+titulo_eleitor = input("Você tem título de eleitor?: ")
 
-if idade >= 16:
+if titulo_eleitor.lower() == "sim":
+  titulo_eleitor = True
+else:
+  titulo_eleitor = False
+
+if idade >= 16 and titulo_eleitor:
   print("Você pode votar!\n")
 else:
   print("Você não pode votar!\n")
 
 print("Quem pode dirigir?")
 idade = int(input("Digite sua idade: "))
+cnh = input("Você possui CNH?: ")
 
-if idade >= 18:
+if cnh.lower() == "sim":
+  cnh = True
+else:
+  cnh = False
+
+if idade >= 18 and cnh:
   print("Você pode dirigir!\n")
 else:
   print("Você não pode dirigir!\n")
 
 print("Desconto de 10% na compra à vista")
 preco = float(input("Digite o valor do produto: "))
+avista = input("Deseja pagar à vista?: ")
 
-desconto = preco * 0.1
-preco = preco - desconto
-print("Você recebe 10% de desconto caso pague a vista!")
-print(f"O valor à vista da compra com 10% de desconto fica: R${preco}\n")
+if avista.lower() == "sim":
+  avista = True
+  desconto = preco * 0.1
+  precodesconto = preco - desconto
+  print(f"Desconto de 10% {desconto}")
+  print(f"Valor final: {precodesconto}")
+else:
+  avista = False
+  print(f"Valor da compra: {preco}")
 
 print("Aumento de 15% no salário até 2000 reais")
 salario = float(input("Digite o valor do seu salário: "))

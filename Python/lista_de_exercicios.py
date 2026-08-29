@@ -220,7 +220,7 @@ elif op == "*":
   print(f"({num1}) * ({num2}) = {mul}")
 elif op == "/":
   div = num1 / num2
-  print(f"({num1}) / ({num2}) = {div.2f}")
+  print(f"({num1}) / ({num2}) = {div:.2f}")
 elif op == "%":
   resto = num1 % num2
   print(f"({num1}) % ({num2}) = {resto}")

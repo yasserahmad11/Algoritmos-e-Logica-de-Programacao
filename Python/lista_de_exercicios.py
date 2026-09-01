@@ -229,3 +229,54 @@ elif op == "**":
   print(f"({num1}) ** ({num2}) = {pot}")
 else:
   print("Operação Incorreta!!!")
+
+#EXERCÍCIO 21
+print("Prática esportiva: entre 12 e 18 anos + autorização")
+idade = int(input("Digite sua idade: "))
+autorizacao = str(input("Você possuiu autorização?: "))
+
+if autorizacao.lower() == "sim":
+  autorizacao = True
+else:
+  autorizacao = False
+
+if (idade >= 12 and idade <= 18) and autorizacao:
+  print("Você está autorizado à prática esportiva!")
+else:
+  print("Você não está autorizado à prática esportiva!")
+
+#EXERCÍCIO 22
+print("Está chovendo: operador não/not")
+chovendo = str(input("Está chovendo?: "))
+
+if chovendo.lower() == "sim":
+  chovendo = False
+  print(not False)
+else:
+  print(not True)
+
+#EXERCÍCIO 23
+print("Classificação: criança, adolescente, adulto ou idoso")
+idade = int(input("Digite sua idade: "))
+
+if idade <= 11:
+  print("Você é uma criança!")
+elif idade >= 12 and idade <= 18:
+  print("Você é um adolescente!")
+elif idade >= 19 and idade <= 59:
+  print("Você é um adulto!")
+else:
+  print("Você é um idoso!")
+
+#EXERCÍCIO 24
+print("Classificação do triângulo: equilátero, isósceles e escaleno")
+lado1 = float(input("Digite o valor do lado 1: "))
+lado2 = float(input("Digite o valor do lado 2: "))
+lado3 = float(input("Digite o valor do lado 3: "))
+
+if lado1 == lado2 and lado1 == lado3:
+  print("É um triângulo equilátero!")
+elif (lado1 == lado2 and lado1 != lado3) or (lado1 == lado3 and lado1 != lado2) or (lado2 == lado3 and lado2 != lado1):
+  print("É um triângulo isósceles!")
+else:
+  print("É um triângulo escaleno!")

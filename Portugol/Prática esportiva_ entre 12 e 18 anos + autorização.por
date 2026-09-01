@@ -1,7 +1,7 @@
 programa {
   funcao inicio() {
     inteiro idade
-    cadeia autorizacao
+    logico autorizacao = verdadeiro
 
     escreva("Digite sua idade: ")
     leia(idade)
@@ -9,7 +9,7 @@ programa {
     escreva("Você possui autorização? (sim/não): ")
     leia(autorizacao)
 
-    se ((autorizacao == "sim" ou autorizacao == "Sim" ou autorizacao == "SIM") e (idade >= 12 e idade <= 18)) {
+    se (idade >= 12 e idade <= 18 e autorizacao) {
       escreva("Você está autorizado à prática esportiva!")
     }
     senao {

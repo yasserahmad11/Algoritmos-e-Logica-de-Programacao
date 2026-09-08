@@ -280,3 +280,49 @@ elif (lado1 == lado2 and lado1 != lado3) or (lado1 == lado3 and lado1 != lado2) 
   print("É um triângulo isósceles!")
 else:
   print("É um triângulo escaleno!")
+
+#EXERCÍCIO 25
+print("Listas/Opções para forma de pagamento")
+print("====== FORMAS DE PAGAMENTO ======")
+print(" (1) DINHEIRO\n (2) CARTÃO\n (3) PIX\n (4) BOLETO")
+opcao_escolhida = int(input("Digite a forma de pagamento: "))
+
+def forma_pagamento(opcao):
+  if opcao == 1:
+    print("Forma de pagamento selecionada: DINHEIRO")
+  elif opcao == 2:
+    print("Forma de pagamento selecionada: CARTÃO")
+  elif opcao == 3:
+    print("Forma de pagamento selecionada: PIX")
+  elif opcao == 4:
+    print("Forma de pagamento selecionada: BOLETO")
+  else:
+    print("Forma de pagamento inválida!!!")
+  
+forma_pagamento(opcao_escolhida)
+
+#EXERCÍCIO 26
+print("Desconto progressivo: 100 = 10%; 300 = 15%; acima de 500 = 20%")
+preco = float(input("Digite o valor da compra: "))
+
+def desconto_progressivo(preco):
+  if preco >= 100 and preco < 300:
+    desconto = preco * 0.10
+    preco = preco - desconto
+    print("Você recebeu 10% de desconto")
+    print(f"Valor final da compra: {preco}")
+  elif preco >= 300 and preco < 500:
+    desconto = preco * 0.15
+    preco = preco - desconto
+    print("Você recebeu 15% de desconto")
+    print(f"Valor final da compra: {preco}")
+  elif preco >= 500:
+    desconto = preco * 0.20
+    preco = preco - desconto
+    print("Você recebeu 20% de desconto")
+    print(f"Valor final da compra: {preco}")
+  else:
+    print("Você não recebeu desconto!")
+    print(f"Valor da compra: {preco}")
+
+desconto_progressivo(preco)

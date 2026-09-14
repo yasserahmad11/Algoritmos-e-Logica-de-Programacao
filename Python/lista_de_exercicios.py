@@ -301,28 +301,31 @@ def forma_pagamento(opcao):
   
 forma_pagamento(opcao_escolhida)
 
-#EXERCÍCIO 26
-print("Desconto progressivo: 100 = 10%; 300 = 15%; acima de 500 = 20%")
-preco = float(input("Digite o valor da compra: "))
+# EXERCÍCIO 26
+def principal():
+  print("Desconto progressivo: 100 = 10%; 300 = 15%; acima de 500 = 20%")
+  preco = float(input("Digite o valor da compra: R$ "))
+  preco_final = desconto_progressivo(preco)
+  print(f"Valor final da compra: R$ {preco_final}")
 
 def desconto_progressivo(preco):
   if preco >= 100 and preco < 300:
     desconto = preco * 0.10
     preco = preco - desconto
     print("Você recebeu 10% de desconto")
-    print(f"Valor final da compra: {preco}")
+    return preco
   elif preco >= 300 and preco < 500:
     desconto = preco * 0.15
     preco = preco - desconto
     print("Você recebeu 15% de desconto")
-    print(f"Valor final da compra: {preco}")
+    return preco
   elif preco >= 500:
     desconto = preco * 0.20
     preco = preco - desconto
     print("Você recebeu 20% de desconto")
-    print(f"Valor final da compra: {preco}")
+    return preco
   else:
     print("Você não recebeu desconto!")
-    print(f"Valor da compra: {preco}")
+    return preco
 
-desconto_progressivo(preco)
+principal()
